@@ -31,7 +31,7 @@ nav {
 }
 
 .logo img {
-    height: 80px;
+    height: 50px; /* Smanjeno za mobilne */
 }
 
 .search-bar {
@@ -39,8 +39,8 @@ nav {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 25px;
-    padding: 5px 15px;
-    margin-right: 30px;
+    padding: 5px 10px;
+    margin-right: 10px; /* Manji razmak za mobilne */
 }
 
 .search-bar input {
@@ -48,8 +48,8 @@ nav {
     border: none;
     outline: none;
     color: #fff;
-    padding: 10px;
-    width: 200px;
+    padding: 5px; /* Smanjeno za mobilne */
+    width: 150px; /* Manje širine za mobilne */
 }
 
 .search-bar button {
@@ -57,7 +57,7 @@ nav {
     border: none;
     cursor: pointer;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px; /* Manja ikonica za mobilne */
 }
 
 /* Restorani karusel */
@@ -65,10 +65,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    float:left;
+    gap: 10px; /* Manji razmak za mobilne */
+    padding: 10px; /* Smanjeno za mobilne */
+    margin-top: 10px; /* Manji razmak za mobilne */
+    overflow-x: scroll; /* Horizontalno skrolovanje na manjim ekranima */
 }
 
 .restaurant-circle {
@@ -81,8 +81,8 @@ nav {
 }
 
 .restaurant-circle img {
-    width: 100px;
-    height: 100px;
+    width: 60px; /* Smanjena veličina za mobilne */
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
     border: none;
@@ -90,13 +90,13 @@ nav {
 }
 
 .restaurant-circle.selected img {
-    width: 300px;
-    height: 300px;
+    width: 200px; /* Smanjena veličina selektovanog za mobilne */
+    height: 200px;
 }
 
 .restaurant-circle h2 {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Manji font za mobilne */
     text-transform: uppercase;
     color: #fff;
     display: none;
@@ -108,26 +108,28 @@ nav {
 
 /* Sekcija svih restorana */
 .restaurants {
-    padding: 20px;
+    padding: 15px; /* Smanjeno za mobilne */
     background-color: #fff;
     color: #333;
 }
 
 .restaurants h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Smanjeno za mobilne */
+    font-size: 1.2rem; /* Manji font za mobilne */
 }
 
 .restaurant-card {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 15px; /* Smanjeno za mobilne */
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Smanjeno za mobilne */
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid #ddd;
     transition: transform 0.3s;
+    flex-direction: column; /* Prilagođeno za vertikalni prikaz na mobilnim */
 }
 
 .restaurant-card:hover {
@@ -136,21 +138,21 @@ nav {
 }
 
 .restaurant-card img {
-    width: 80px;
-    height: 80px;
+    width: 60px; /* Smanjena veličina slike za mobilne */
+    height: 60px;
     border-radius: 50%;
     border: 2px solid #ccc;
     object-fit: cover;
 }
 
 .restaurant-card .info {
-    flex: 1;
-    margin-left: 20px;
+    margin-left: 0; /* Centrirano za vertikalni prikaz */
+    text-align: center;
 }
 
 .restaurant-card h3 {
-    margin: 0;
-    font-size: 1.2rem;
+    margin: 10px 0; /* Smanjeno za mobilne */
+    font-size: 1rem; /* Manji font za mobilne */
     color: #333;
 }
 
@@ -166,4 +168,38 @@ nav {
 
 .restaurant-card button:hover {
     background-color: #0056b3;
+}
+
+/* Media Query za mobilne uređaje */
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; /* Još manji logo za telefone */
+    }
+
+    .search-bar input {
+        width: 120px; /* Još manje za telefone */
+    }
+
+    .restaurants-carousel {
+        gap: 5px; /* Manji razmak među krugovima */
+    }
+
+    .restaurant-circle img {
+        width: 50px; /* Još manje krugove za telefone */
+        height: 50px;
+    }
+
+    .restaurant-circle.selected img {
+        width: 150px; /* Manji selektovani krug za telefone */
+        height: 150px;
+    }
+
+    .restaurant-card {
+        padding: 10px; /* Još manje kartice za telefone */
+    }
+
+    .restaurant-card img {
+        width: 50px; /* Još manje slike za kartice */
+        height: 50px;
+    }
 }
