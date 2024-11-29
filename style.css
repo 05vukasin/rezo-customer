@@ -291,5 +291,14 @@ a{
     .carousel .list .item .content{
         padding-right: 0;
     }
-    
+    .carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #ffffff;
+    font-size: 20px;
+}
 }
