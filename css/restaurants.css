@@ -1,0 +1,101 @@
+/* Sekcija restorana */
+.restaurants {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.restaurants h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #444;
+    text-transform: uppercase;
+}
+
+/* Stil za kartice restorana */
+.restaurant-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.restaurant-card .info {
+    flex: 1;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.restaurant-card .info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.restaurant-card .info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Dugme za rezervaciju */
+.restaurant-card button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive stilovi */
+@media (max-width: 768px) {
+    .restaurant-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .restaurant-card img {
+        margin-bottom: 15px;
+    }
+
+    .restaurant-card .info {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .restaurant-card button {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
